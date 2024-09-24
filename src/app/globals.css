@@ -1,0 +1,114 @@
+*{
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   background-color: orange;
+}
+
+.navbar > .buttons > button {
+    padding: 10px 15px;
+    background-color: red;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 10px;
+}
+
+.container > input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid gray;
+}
+
+.container > button {
+   padding: 8px 15px;
+   font-size: 18px;
+   color: #fff;
+   background-color: orange;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+.container > label {
+  font-size: 18px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35em;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar-brand > ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-brand > ul > li {
+  font-size: 18px;
+}
+
+.navbar-nav {
+  padding: '20px';
+  display: "flex";
+  flex-direction: "column";
+  gap: "20px"
+}
+.div > .navbar-nav > li:hover {
+    background-color: #2220204c;
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 30px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+
+.col {
+  box-shadow: 1px 1px 10px #bbb;
+  padding: 10px;
+  width: 24%;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
