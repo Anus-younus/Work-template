@@ -1,6 +1,5 @@
 'use client'
 
-import { useAuthContext } from "@/context/authContext";
 import { db } from "@/firebase/firebase.firestore";
 import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";

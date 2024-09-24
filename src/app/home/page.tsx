@@ -1,7 +1,7 @@
 "use client"
 
 import { db } from "@/firebase/firebase.firestore"
-import { collection, onSnapshot, query, where } from "firebase/firestore"
+import { collection, onSnapshot, query } from "firebase/firestore"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
@@ -54,13 +54,12 @@ type Product = {
 export default function Home() {
   const [products, setProuducts] = useState<Product[]>([])
   useEffect(() => {
-    let cloneProducts = [...products]
-    const uid = localStorage.getItem("uid")
+    const cloneProducts = [...products]
     const collectioRef = collection(db, "products")
     const q = query(collectioRef)
     onSnapshot(q, (producct) => {
       producct.forEach((doc) => {
-        let data = doc.data() as Product
+        const data = doc.data() as Product
         data.id = doc.id
         cloneProducts.push(data)
         setProuducts([...cloneProducts])
@@ -68,13 +67,13 @@ export default function Home() {
     })
     console.log(products);
 
-  }, [])
+  }, [products])
   return (
     <>
       <div className="row">
         {
           products.length > 0 ?
-            products.map((product: any) => (
+            products.map((product) => (
               <Link href={`/${product?.id}`} key={product?.id} className="col">
                 <div>
                   <img style={{width: "18rem", height: "13em"}} src={product?.image} alt="" />

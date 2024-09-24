@@ -19,7 +19,7 @@ type ProductType = {
 
 export const setUserDb = async (user: UserType) => {
     try {
-        let docRef = doc(db, "users", user.uid)
+        const docRef = doc(db, "users", user.uid)
         await setDoc(docRef, user)
     } catch (e) {
         console.error(e);

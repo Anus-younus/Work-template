@@ -22,7 +22,7 @@ export default function AuthContextProvider({children}: {children: React.ReactNo
         })
         console.log(isAuthenticated);
         
-    }, [])
+    }, [isAuthenticated])
     return (
         <AuthContext.Provider value={{isAuthenticated}}>
             {children}

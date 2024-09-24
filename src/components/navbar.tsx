@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import '../app/globals.css'
 import { useAuthContext } from '@/context/authContext'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { auth, LogOutUser } from '@/firebase/firebase.auth'
 
 export default function Navbar() {
